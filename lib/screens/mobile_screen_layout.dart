@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/colors.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({Key? key}) : super(key: key);
@@ -23,18 +24,25 @@ class MobileScreenLayout extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(Icons.more_vert, color: Colors.grey)),
           ],
-          bottom: const TabBar(tabs: [
-            Tab(
-              text: "CHATS",
-            ),
-            Tab(
-              text: "STATUS",
-            ),
-            Tab(
-              text: "CALLS",
-            )
-          ]),
+          bottom: const TabBar(
+              indicatorColor: tabColor,
+              indicatorWeight: 4,
+              labelColor: tabColor,
+              unselectedLabelColor: Colors.grey,
+              labelStyle: TextStyle(fontWeight: FontWeight.bold),
+              tabs: [
+                Tab(
+                  text: "CHATS",
+                ),
+                Tab(
+                  text: "STATUS",
+                ),
+                Tab(
+                  text: "CALLS",
+                )
+              ]),
         ),
+        body: const Text("Mobile"),
       ),
     );
   }
