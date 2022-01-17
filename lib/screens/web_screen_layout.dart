@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/widgets/constacs_list.dart';
+import 'package:whatsapp_ui/widgets/web_profile_bar.dart';
 
 class WebScreenLayout extends StatelessWidget {
   const WebScreenLayout({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class WebScreenLayout extends StatelessWidget {
             child: Column(
               children: [
                 //Web Profile Bar
+                WebProfileBar(),
                 //Web Search Bar
                 ContactsList()
               ],
